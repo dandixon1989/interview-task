@@ -1,0 +1,136 @@
+#{$all-buttons} {
+	appearance: none;
+	background-color: $action-color;
+	border: 0;
+	border-radius: $base-border-radius;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 600;
+	line-height: 1;
+	padding: $small-spacing $base-spacing;
+	text-decoration: none;
+	transition: background-color $base-duration $base-timing;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	&:hover,
+	&:focus {
+		background-color: shade($action-color, 20%);
+		color: #fff;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+
+		&:hover {
+			  background-color: $action-color;
+		}
+	}
+}
+
+
+.button {
+	display: inline-block;
+	font-size: 35px;
+	font-size: 1.4em;
+	line-height: 1;
+	background-color: $prussian-blue;
+	border-radius: 6px;
+	color: #FFF;
+	text-decoration: none;
+	font-weight: 300;
+	padding: 12px 20px;
+	&.button_red {
+		font-size: 25px;
+		background-color: $stiletto;
+		&:hover, &:visited, &:active {
+			color: #FFF;
+		}
+	}
+	&.button-red {
+		background-color: $stiletto;
+		color: #FFF;
+		padding: .5em .7em;
+		&:hover, &:visited, &:active {
+			background-color: darken($stiletto, 10%);
+		}
+	}
+	&.button_blue {
+		background-color: $prussian-blue;
+	}
+	&.button_right_arrow,
+	&.button-right-arrow {
+		&:after {
+			content: '\f0a9';
+			font-family: 'FontAwesome';
+			margin-left: 20px;
+		}
+	}
+	&--color- {
+		&white {
+			color: #FFF;
+			border: 2px solid #FFF;
+			&:hover {
+				color: #FFF;
+			}
+		}
+		&red {
+			color: $ironstone;
+			border: 1px solid $ironstone;
+			&:hover, &:visited, &:active {
+				color: $ironstone;
+			}
+		}
+	}
+	&--background- {
+		&blue {
+			background-color: $prussian-blue;
+		}
+		&white {
+			background-color: white;
+		}
+		&clear {
+			background: transparent;
+			&:hover {
+				background-color: #FFF;
+			}
+		}
+	}
+	&--outline- {
+		&blue {
+			box-shadow: 0 0 0 10px $prussian-blue;
+		}
+		&red {
+			box-shadow: 0 0 0 10px $ironstone;
+		}
+		&white {
+			box-shadow: 0 0 0 10px white;
+		}
+	}
+	&--text- {
+		&small {
+			font-size: .9em;
+		}
+	}
+	&--hover- {
+		&color-purple {
+			transition: color .2s ease, background-color .2s ease;
+			&:hover {
+				color: $studio;
+			}
+		}
+	}
+}
+
+
+.outline-button { // Alternative to BEM as there are too many button styles already :(
+	&--color-blue {
+
+	}
+}
